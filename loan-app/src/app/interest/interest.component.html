@@ -1,0 +1,18 @@
+<!--  // Title: Capstone Project - Loan Calculator App
+  // Author: Professor Krasso
+  // Date: 16 Dec 2022
+  // Modified By: Kayla McDanel
+  // Description: Loan Calculator App
+  // Code Attribution: Code and instruction provided by Professor Krasso's videos and assignment docs.-->
+
+<!--cards containing monthly payment info-->
+<mat-card class="payment-card mat-elevation-z0">
+    <mat-card-subtitle style="text-align: center; font-size: 48px" class="payment-subtitle">Interest Paid:</mat-card-subtitle>
+    <div>
+      <mat-card-content>
+        <div class="payment-content" style="text-align:center; font-size: 48px" class="payment-sub">
+          {{ "$" + ( interest | number : "1.2-2") }}
+        </div>
+      </mat-card-content>
+    </div>
+  </mat-card>

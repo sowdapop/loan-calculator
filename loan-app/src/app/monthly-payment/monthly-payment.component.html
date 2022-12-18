@@ -1,0 +1,19 @@
+<!--
+  // Title: Capstone Project - Loan Calculator App
+  // Author: Professor Krasso
+  // Date: 16 Dec 2022
+  // Modified By: Kayla McDanel
+  // Description: Loan Calculator App
+  // Code Attribution: Code and instruction provided by Professor Krasso's videos and assignment docs.
+-->
+
+<!--cards containing monthly payment info-->
+<div class="container">
+  <div style="font-size:48px; text-align: center;">
+    Your monthly payment:
+  </div>
+  <div style="font-size: 48px; text-align: center; padding-top:30px;">
+    {{ "$" + (monthlyPayment | number:'1.2-2') }}
+  </div>
+</div>
+<br /><br />

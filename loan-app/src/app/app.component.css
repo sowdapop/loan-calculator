@@ -1,0 +1,17 @@
+/*  // Title: Capstone Project - Loan Calculator App
+  // Author: Professor Krasso
+  // Date: 16 Dec 2022
+  // Modified By: Kayla McDanel
+  // Description: Loan Calculator App
+  // Code Attribution: Code and instruction provided by Professor Krasso's videos and assignment docs.*/
+
+/*styling for logo container elements*/
+.logo {
+    margin-top: 5 px;
+  }
+  
+  .main-container {
+    padding-top: 25px;
+    width: 80%;
+    margin: 0 auto;
+  }

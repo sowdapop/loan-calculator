@@ -1,0 +1,61 @@
+<!--
+  // Title: Capstone Project - Loan Calculator App
+  // Author: Professor Krasso
+  // Date: 16 Dec 2022
+  // Modified By: Kayla McDanel
+  // Description: Loan Calculator App
+  // Code Attribution: Code and instruction provided by Professor Krasso's videos and assignment docs.
+-->
+
+<!--loan infor form-->
+<mat-card>
+    <mat-card-content>
+      <div fxLayout="row wrap">
+        <div fxFlex>
+          <mat-card class="mat-elevation-z0">
+            <mat-card-title>Enter loan details</mat-card-title>
+            <mat-card-content class="align-center" style="font-size: 24px;">
+                <br />
+
+              <form fxLayout="column" class="loan-form" [formGroup]="loanForm">
+                <mat-label style="padding: 5px;">Loan Amount</mat-label>
+                <mat-form-field fxFlex appearance="fill">
+                  <input type="text" name="loanAmount" placeHolder="Enter a dollar amount" formControlName="loanAmount" style="padding: 5px; background-color: rgb(255, 255, 255);" matInput/>
+                  <br /><br /></mat-form-field> 
+  
+                <mat-label>Interest Rate</mat-label>
+                <mat-form-field fxFlex appearance="fill">
+                 <input type="text" name="interestRate" placeholder="Enter a percentage" formControlName="interestRate" style="padding: 5px; background-color: rgb(255, 255, 255);" matInput/>
+                 <br /><br /> </mat-form-field>
+  
+                <mat-label>Number of Years</mat-label>
+                <mat-form-field fxFlex appearance="fill">
+                  <input type="text" name="numOfYears" placeholder="Enter number of years" formControlName="numOfYears" style="padding: 5px; background-color: rgb(255, 255, 255);" matInput/>
+                  <br /><br /></mat-form-field>
+  
+                
+                <!-- Submit button -->
+                <button mat-raised-button (click)="calculateLoan()" style="color: white; background-color: black; width: 35%;">Submit</button>
+              </form>
+            </mat-card-content>
+          </mat-card>
+        </div> 
+
+        
+        <!--calculation results-->
+        <div fxFlex class="results">
+          <mat-card class="mat-elevation-z0">
+            <mat-card-title></mat-card-title>
+            <mat-card-content>
+              <app-monthly-payment [monthlyPayment]="monthlyPayment"></app-monthly-payment>
+                <app-interest [interest]="interest"></app-interest><br />
+                <button mat-button (click)="clearEntries()" style="color: white; background-color: black;">Clear</button>
+              </mat-card-content>
+           </mat-card>
+        </div>
+      </div>
+  
+    </mat-card-content>
+  </mat-card>
+
+  <!---->

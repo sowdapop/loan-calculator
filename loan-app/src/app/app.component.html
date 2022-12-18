@@ -1,0 +1,38 @@
+<!--
+  // Title: Capstone Project - Loan Calculator App
+  // Author: Professor Krasso
+  // Date: 16 Dec 2022
+  // Modified By: Kayla McDanel
+  // Description: Loan Calculator App
+  // Code Attribution: Code and instruction provided by Professor Krasso's videos and assignment docs.
+-->
+
+<mat-toolbar class="toolbar" style="background-color: rgb(243, 203, 100)">
+  <mat-toolbar-row>
+    <div class="logo">
+      <img src="./assets/Hufflepuff_ClearBG.webp" height="65" />
+    </div>
+
+    <div style="width: 80%">
+    <div fxLayout="row wrap"  fxLayoutAlign="end start">
+      <button mat-button style="background-color: rgb(243, 203, 100); font-size: 16px; font-weight: bold;" routerLink="/">Home</button>
+      <button mat-button style="background-color: rgb(243, 203, 100); font-size: 16px; font-weight: bold;" routerLink="/about">About Us</button>
+      <button mat-button style="background-color: rgb(243, 203, 100); font-size: 16px; font-weight: bold;" routerLink="/contact">Contact Us</button>
+    </div>
+  </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br />
+
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <mat-card class="main-container" style="background-color: rgb(252, 249, 243); font-size: 36px; font-weight: bold;">
+        {{ title }}
+      <br /><br />
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
